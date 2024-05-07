@@ -1,11 +1,13 @@
 package com.ezpiano.moduleapi.repository.Sheets;
 
-import com.ezpiano.Ezpiano.entity.Sheets;
+import com.ezpiano.Ezpiano.entity.Sheet;
 
 import java.util.List;
 
 public interface SheetRepository {
-    Sheets save(Sheets sheet);
-    List<Sheets> sheetList();
-    Sheets sheetDetail(String user_id, int sheet_id);
+    void save(Sheet sheet);
+    List<Sheet> sheetList();
+    Sheet sheetDetail(String userId, long sheetId);
+    Sheet sheetUpdate(long sheetId, Sheet updatedSheet);
+
 }
